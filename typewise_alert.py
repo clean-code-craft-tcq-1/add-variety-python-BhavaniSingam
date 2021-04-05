@@ -21,13 +21,17 @@ def classify_temperature_breach(coolingType, temperatureInC):
 def send_to_controller(breachType):
   header = 0xfeed
   print(f'{header}, {breachType}')
+  
+def send_to_console(breachType):
+  print(f'BreachType is:, {breachType}')
+  return True
 
 def send_to_email(breachType):
   recepient = "a.b@c.com"
   print(f'To: {recepient}')
   print('Hi, the temperature is ', breachedMsgs[breachType])
 
-alert_Target_Type = {"TO_CONTROLLER": send_to_controller, "TO_EMAIL" : send_to_email}
+alert_Target_Type = {"TO_CONTROLLER": send_to_controller, "TO_EMAIL" : send_to_email, "TO_CONSOLE" : send_to_console}
 
 def check_and_alert(alertTarget, batteryChar, temperatureInC):
   breachType =\
