@@ -1,4 +1,4 @@
-coolingTypeList = {'PASSIVE_COOLING' : {min: 0, max: 35}, 'HI_ACTIVE_COOLING' : {min: 0, max: 45}, 'MED_ACTIVE_COOLING' : {min: 0, max: 40}}
+coolingTypeList = {'PASSIVE_COOLING' : {min: 0, max: 35}, 'HIGH_ACTIVE_COOLING' : {min: 0, max: 45}, 'MED_ACTIVE_COOLING' : {min: 0, max: 40}}
 
 breachedMsgs = {'TOO_LOW' : 'too low', 'TOO_HIGH' : 'too high', 'NORMAL' : 'normal'}
 
