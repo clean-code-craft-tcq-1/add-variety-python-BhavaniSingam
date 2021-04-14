@@ -4,7 +4,9 @@ breachedMsgs = {'TOO_LOW' : 'too low', 'TOO_HIGH' : 'too high', 'NORMAL' : 'norm
 
 breachType_email = {
         'TOO_LOW': {'recepient': "low.b@c.com"},
-        'TOO_HIGH': {'recepient': "High.b@c.com"}}
+        'TOO_HIGH': {'recepient': "High.b@c.com"}
+        'NORMAL': {'recepient': "Normal.b@c.com" }
+}
 
 def infer_breach(value, lowerLimit, upperLimit):
   if value < lowerLimit:
