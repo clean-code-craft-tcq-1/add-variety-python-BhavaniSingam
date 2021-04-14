@@ -2,6 +2,10 @@ coolingTypeList = {'PASSIVE_COOLING' : {'min': 0, 'max': 35}, 'HIGH_ACTIVE_COOLI
 
 breachedMsgs = {'TOO_LOW' : 'too low', 'TOO_HIGH' : 'too high', 'NORMAL' : 'normal'}
 
+breachType_email = {
+        'TOO_LOW': {'recepient': "low.b@c.com"},
+        'TOO_HIGH': {'recepient': "High.b@c.com"}}
+
 def infer_breach(value, lowerLimit, upperLimit):
   if value < lowerLimit:
     return 'TOO_LOW'
@@ -29,10 +33,8 @@ def send_to_console(breachType):
   return True
 
 def send_to_email(breachType):
-  recepient = "a.b@c.com"
-  print(f'To: {recepient}')
-  print('Hi, the temperature is ', breachedMsgs[breachType])
-  return True
+   print(f"Hello: {breachType_email[breachType]['recepient']}\n Breach is: {breachType}")
+   return True
 
 alert_Target_Type = {"TO_CONTROLLER": send_to_controller, "TO_EMAIL" : send_to_email, "TO_CONSOLE" : send_to_console}
 
